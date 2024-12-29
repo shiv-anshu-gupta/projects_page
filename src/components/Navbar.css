@@ -1,0 +1,29 @@
+/* Default navbar styles */
+nav {
+  color: #163a24;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover underline effect */
+.hover-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; /* Adjust spacing below the text */
+}
+
+/* Pseudo-element for underline */
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Thickness of the line */
+  background-color: #163a24; /* Color of the underline */
+  transition: width 0.3s ease;
+}
+
+/* Expand underline on hover */
+.hover-underline:hover::after {
+  width: 100%; /* Full width underline */
+}
